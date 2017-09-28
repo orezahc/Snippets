@@ -1,5 +1,5 @@
 - Select indexed [schema].[table] 
-````
+```
 SELECT 
     IndexName = QUOTENAME(I.name), 
     TableName =
@@ -14,9 +14,9 @@ WHERE
 ORDER BY 
     TableName ASC, 
     IndexName ASC;
-````
+```
 - Select [schema].[table] with identity
-````
+```
 SELECT
     TableName =
         QUOTENAME(SCHEMA_NAME(T.[schema_id])) + 
@@ -29,4 +29,8 @@ LEFT OUTER JOIN sys.columns AS C
 where SCHEMA_NAME(T.[schema_id]) = 'schema'
 ORDER BY
     TableName ASC
-````
+```
+- Index a table
+```
+CREATE INDEX IDX_TABLENAME ON [schema].[table] (COL1, COL2, ...)
+```
