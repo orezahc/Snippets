@@ -34,3 +34,14 @@ ORDER BY
 ```
 CREATE INDEX IDX_TABLENAME ON [schema].[table] (COL1, COL2, ...)
 ```
+
+- Generate SQL statements for droping all tables from a specified schema.
+```
+DECLARE @SqlStatement NVARCHAR(MAX)
+SELECT @SqlStatement = 
+    COALESCE(@SqlStatement, N'') + N'DROP TABLE [DBO1].' + QUOTENAME(TABLE_NAME) + N';' + CHAR(13)
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_SCHEMA = 'raw'
+
+PRINT @SqlStatement
+```
