@@ -1,3 +1,5 @@
+# sh <(curl -s https://raw.githubusercontent.com/orezahc/Snippets/master/vim-setup.sh)
+
 mkdir -p ~/.vim/colors
 git clone https://github.com/altercation/vim-colors-solarized.git
 mv vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
