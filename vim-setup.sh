@@ -1,7 +1,7 @@
 mkdir -p ~/.vim/colors
 git clone https://github.com/altercation/vim-colors-solarized.git
 mv vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
-rm -r vim-colors-solarized
+rm -rf vim-colors-solarized
 
 cat > ~/.vimrc << EOF
 set nocompatible              " be iMproved, required
