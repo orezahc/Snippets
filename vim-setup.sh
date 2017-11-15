@@ -6,6 +6,7 @@ mv vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 rm -rf vim-colors-solarized
 
 cat > ~/.vimrc << EOF
+set relativenumber
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set backspace=2
