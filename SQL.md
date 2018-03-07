@@ -55,3 +55,8 @@ FROM   sys.tables AS T
                   AND I.indid < 2 
 ORDER  BY I.rows DESC
 ```
+
+- datetime2 of last day
+```
+select dateadd(day, -1, convert(datetime2, '2018-02-06T17:24:06.8130000'));
+```
